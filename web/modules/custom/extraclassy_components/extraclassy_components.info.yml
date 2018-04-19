@@ -1,0 +1,5 @@
+name: 'extraclassy_components'
+type: module
+description: 'Extraclassy components'
+core: 8.x
+package: 'Wunder'

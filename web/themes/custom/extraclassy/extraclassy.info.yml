@@ -1,0 +1,9 @@
+name: Extraclassy
+type: theme
+description: 'Extraclassy Component Based Theme for Drupal 8'
+package: Wunder
+core: 8.x
+libraries:
+  - extraclassy/global
+
+

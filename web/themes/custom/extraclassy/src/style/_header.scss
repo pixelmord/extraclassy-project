@@ -1,0 +1,5 @@
+.header {
+  @include background-image(radial-gradient(45px 45px, cyan 10px, dodgerblue 30px));
+
+  color: $color-white;
+}

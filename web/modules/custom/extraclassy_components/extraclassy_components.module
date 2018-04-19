@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains extraclassy_components.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function extraclassy_components_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the extraclassy_components module.
+    case 'help.page.extraclassy_components':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Extraclassy components') . '</p>';
+      return $output;
+
+    default:
+  }
+}

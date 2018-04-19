@@ -1,0 +1,14 @@
+{
+  "name": "drupal/extraclassy_components",
+  "type": "drupal-module",
+  "description": "Extraclassy components",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/extraclassy_components",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/extraclassy_components",
+    "source": "http://cgit.drupalcode.org/extraclassy_components"
+  },
+  "require": { }
+}
