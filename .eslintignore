@@ -1,0 +1,4 @@
+
+vendor/**/*
+**/js_test_files/**/*
+**/node_modules/**/*

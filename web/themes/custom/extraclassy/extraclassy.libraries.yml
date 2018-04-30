@@ -1,0 +1,7 @@
+global:
+  version: 0.1.x
+  css:
+    theme:
+      dist/extraclassy.css: {}
+  js:
+    dist/extraclassy.js: {}

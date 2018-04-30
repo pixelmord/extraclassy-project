@@ -23,3 +23,4 @@
 
 # Ignore frontend vendor libraries
 /node_modules
+yarn-error.log

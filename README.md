@@ -48,6 +48,10 @@ Composer project with component thinking
 * puppeteer for testing (in conjunction with codeception?)
 * Drupal console generate:extraclassy
 
+## questions
+* how to call the build/dist folder
+
+
 ## Links
 * https://justmarkup.com/log/2018/03/collection-of-css-snippets/
 * https://reactjs.org/docs/web-components.html

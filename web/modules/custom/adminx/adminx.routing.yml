@@ -1,0 +1,14 @@
+adminx.app_controller_view:
+  path: '/adminx/{arg0}/{arg1}/{arg2}/{arg3}/{arg4}'
+  defaults:
+    _controller: '\Drupal\adminx\Controller\AppController::view'
+    _title: 'Calendar'
+    arg0: ''
+    arg1: ''
+    arg2: ''
+    arg3: ''
+    arg4: ''
+    arg5: ''
+    arg6: ''
+  requirements:
+    _permission: 'access content'

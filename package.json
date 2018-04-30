@@ -1,9 +1,14 @@
 {
-  "name": "extraclassy",
-  "version": "1.0.0",
+  "name": "extraclassy-project",
+  "version": "0.1.0",
   "description": "",
   "private": true,
-  "main": "src/index.js",
+  "workspaces": ["web/themes/custom/extraclassy"],
+  "paths": {
+    "themeRoot": "./web/themes/custom/extraclassy",
+    "themeLibrary": "./web/themes/custom/extraclassy/extraclassy.libraries.yml"
+  },
+  "proxy": "http://extraclassy.local/",
   "browserslist": [
     "> 1%",
     "IE 10",
@@ -20,48 +25,20 @@
     ]
   },
   "scripts": {
+    "start": "npm-run-all -p watch sync",
     "test": "standard",
     "dev": "webpack-dev-server",
-    "watch": "webpack --mode development --watch",
-    "build": "webpack --mode production"
+    "watch": "NODE_ENV=development webpack --mode development --watch",
+    "build": "NODE_ENV=production webpack --mode production",
+    "sync": "node ./scripts/node/browser-sync.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "babel-core": "^6.24.1",
-    "babel-loader": "^7.1.4",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-env": "^1.5.1",
-    "clean-webpack-plugin": "^0.1.19",
-    "compass-mixins": "^0.12.10",
-    "css-loader": "^0.28.4",
-    "css-mqpacker": "^6.0.2",
-    "file-loader": "^1.1.6",
-    "html-webpack-plugin": "^3.0.6",
-    "image-webpack-loader": "^4.0.0",
-    "immutable": "^3.8.2",
-    "inert-polyfill": "^0.2.5",
-    "lodash": "^4.17.4",
-    "mini-css-extract-plugin": "^0.4.0",
-    "node-sass": "^4.8.3",
-    "postcss": "^6.0.1",
-    "postcss-cssnext": "^3.0.2",
-    "postcss-discard-comments": "^2.0.4",
-    "postcss-import": "^11.0.0",
-    "postcss-loader": "^2.0.6",
-    "postcss-mixins": "^6.0.0",
-    "postcss-nested": "^3.0.0",
-    "postcss-normalize": "^4.0.0",
-    "sass-loader": "^7.0.1",
-    "svg-sprite-loader": "^3.7.0",
-    "svg4everybody": "^2.1.8",
-    "svgo": "^1.0.4",
-    "svgo-loader": "^2.1.0",
-    "tabbable": "^1.1.1",
+    "npm-run-all": "^4.1.2",
     "webpack": "^4.1.1",
-    "webpack-cli": "^2.0.11",
-    "webpack-merge": "^4.1.2"
+    "webpack-cli": "^2.0.11"
   },
   "devDependencies": {
     "standard": "^11.0.0",

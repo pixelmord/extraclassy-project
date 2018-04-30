@@ -1,0 +1,8 @@
+.content{
+  padding:1em; }
+
+.header{
+  background-image:-owg-radial-gradient(45px 45px, cyan 10px, dodgerblue 30px);
+  background-image:radial-gradient(45px 45px, cyan 10px, dodgerblue 30px);
+  color:#fff; }
+
