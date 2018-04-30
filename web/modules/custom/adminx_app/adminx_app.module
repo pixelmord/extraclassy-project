@@ -10,7 +10,7 @@ use Drupal\Core\Routing\RouteMatchInterface;
 /**
  * Implements hook_help().
  */
-function adminx_help($route_name, RouteMatchInterface $route_match) {
+function adminx_app_help($route_name, RouteMatchInterface $route_match) {
   switch ($route_name) {
     // Main module help for the adminx module.
     case 'help.page.adminx':
@@ -26,9 +26,9 @@ function adminx_help($route_name, RouteMatchInterface $route_match) {
 /**
  * Implements hook_theme().
  */
-function adminx_theme() {
+function adminx_app_theme() {
   return [
-    'adminx' => [
+    'adminx_app' => [
       'render element' => 'children',
     ],
   ];

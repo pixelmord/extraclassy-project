@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\adminx\Controller;
+namespace Drupal\adminx_app\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Datetime\DrupalDateTime;

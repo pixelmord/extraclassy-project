@@ -1,0 +1,5 @@
+name: 'adminx app'
+type: module
+description: 'Adminx APP'
+core: 8.x
+package: 'Wunder'
