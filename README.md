@@ -42,7 +42,7 @@ Composer project with component thinking
 * Render element plugins
 * live Demo and documentation
 * React storybook
-* Fractal
+* Fractal or human readable patternlab
 * Codepen
 * Jest for testing
 * puppeteer for testing (in conjunction with codeception?)

@@ -31,14 +31,13 @@ const appName = require(packageJson).name;
 
 // Load proxy config
 const proxy = require(packageJson).proxy;
+const watchFiles = paths.browserSync.map(pathName => path.resolve(rootDirectory, pathName));
 
 // Launch Browsersync server.
 bs.init({
   proxy,
-  files: [
-    path.resolve(rootDirectory, paths.themeRoot, 'dist/**/*.css'),
-    path.resolve(rootDirectory, paths.themeRoot, 'dist/**/*.js')
-  ]
+  injectChanges: true,
+  files: watchFiles
 });
 
 ['SIGINT', 'SIGTERM'].forEach(function(sig) {

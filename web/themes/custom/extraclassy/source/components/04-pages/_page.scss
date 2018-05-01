@@ -1,0 +1,29 @@
+//
+// General Layout (example code)
+//
+
+.header,
+.main,
+.footer {
+  @include wrapper;
+
+  margin-bottom: 4em;
+}
+
+.main-sidebar {
+  @include xl {
+
+  }
+}
+
+.main-content {
+  padding: 0 1em;
+
+  @include xl {
+    padding: 0;
+
+    &--with-sidebar {
+
+    }
+  }
+}

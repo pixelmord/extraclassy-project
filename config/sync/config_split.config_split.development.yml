@@ -1,0 +1,17 @@
+uuid: 76175e7e-7e9e-4b17-85c3-ddb18bac82a5
+langcode: en
+status: true
+dependencies: {  }
+id: development
+label: development
+folder: ../config/sync_dev
+module:
+  devel: 0
+  devel_generate: 0
+  link_css: 0
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

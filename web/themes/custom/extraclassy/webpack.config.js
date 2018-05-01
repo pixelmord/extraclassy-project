@@ -10,7 +10,8 @@ const magicImporter = require('node-sass-magic-importer');
 module.exports = {
   context: path.resolve(__dirname, 'source/'),
   entry: {
-    extraclassy: './index.js'
+    extraclassy: './index.js',
+    patternlab: './patternlab.js'
   },
   module: {
     rules: [
@@ -49,7 +50,7 @@ module.exports = {
             options: {
               importer: magicImporter(),
               includePaths: [
-                path.resolve('./node_modules/compass-mixins/lib/')
+                path.resolve('./node_modules/')
               ]
             }
           }

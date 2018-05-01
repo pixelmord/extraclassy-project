@@ -5,10 +5,14 @@
   "private": true,
   "workspaces": ["web/themes/custom/extraclassy"],
   "paths": {
+    "browserSync": [
+      "./web/themes/custom/extraclassy/dist/**/*.css",
+      "./web/themes/custom/extraclassy/dist/**/*.js"
+    ],
     "themeRoot": "./web/themes/custom/extraclassy",
     "themeLibrary": "./web/themes/custom/extraclassy/extraclassy.libraries.yml"
   },
-  "proxy": "http://extraclassy.local/",
+  "proxy": "http://extraclassy.localhost/",
   "browserslist": [
     "> 1%",
     "IE 10",

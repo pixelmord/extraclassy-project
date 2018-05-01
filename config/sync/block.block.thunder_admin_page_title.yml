@@ -1,0 +1,20 @@
+uuid: a8c01738-594d-4c19-a0f8-99bf8080195f
+langcode: en
+status: true
+dependencies:
+  theme:
+    - thunder_admin
+_core:
+  default_config_hash: fHaGwrR7tjN2vjZ_Qxrsm3spL0j46SmZu46JG-wpY-s
+id: thunder_admin_page_title
+theme: thunder_admin
+region: header
+weight: -3
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

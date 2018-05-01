@@ -1,0 +1,22 @@
+uuid: 31b9b551-cc69-420a-aeba-8b26f65f4386
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - extraclassy
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: extraclassy_help
+theme: extraclassy
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

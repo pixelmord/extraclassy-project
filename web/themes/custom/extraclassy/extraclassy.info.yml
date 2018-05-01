@@ -2,8 +2,36 @@ name: Extraclassy
 type: theme
 description: 'Extraclassy Component Based Theme for Drupal 8'
 package: Wunder
+base theme: stable
 core: 8.x
+
 libraries:
   - extraclassy/global
 
+regions:
+  toolbar: Toolbar
+  content: Content  # the content region is required
+  footer: Footer
 
+
+# MUST install `components` module: `drush dl components && drush en components -y`
+# For compatibility with Pattern Lab templates; this list must
+# always be the folders immediately under the `$sourceDir` patterns folder
+# `$sourceDir` = defined in `pattern-lab/config/config.yml` under `sourceDir
+# patterns folder = `$sourceDir` + `_patterns/`
+component-libraries:
+  base:
+    paths:
+      - source/components/00-base
+  elements:
+    paths:
+      - source/components/01-elements
+  components:
+    paths:
+      - source/components/02-components
+  templates:
+    paths:
+      - source/components/03-templates
+  pages:
+    paths:
+      - source/components/04-pages

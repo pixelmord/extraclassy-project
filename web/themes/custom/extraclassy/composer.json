@@ -1,0 +1,30 @@
+{
+  "name": "wunderio/extraclassy",
+  "description": "Project template for Drupal 8 themes",
+  "type": "drupal-theme",
+
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Andreas Sahle",
+      "email": "andreas.sahle@wunder.io"
+    }
+  ],
+  "repositories": {
+    "drupal": {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
+  },
+  "require": {
+    "drupal/components": "^1.0",
+    "drupal-pattern-lab/add-attributes-twig-extension": "^1.0",
+    "drupal-pattern-lab/bem-twig-extension": "^1.0",
+    "drupal-pattern-lab/unified-twig-extensions": "^0.1"
+  },
+  "require-dev": {},
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "scripts": {},
+  "extra": []
+}
