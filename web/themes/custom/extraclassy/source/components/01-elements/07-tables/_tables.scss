@@ -1,7 +1,7 @@
 $table-gray: #f8f8f8;
 
 .table {
-  border: 1px solid $gray-lightest;
+  border: 1px solid $color__gray-1;
   border-radius: 4px;
   border-spacing: 0;
   background-color: $table-gray;
@@ -10,8 +10,8 @@ $table-gray: #f8f8f8;
 
 .table__heading-cell {
   border: none;
-  border-left: 1px solid $gray-lightest;
-  color: $black;
+  border-left: 1px solid $color__gray-1;
+  color: $color__black;
   font-weight: 700;
   padding: 1.2em;
   text-align: left;
@@ -23,7 +23,7 @@ $table-gray: #f8f8f8;
 
 .table__row {
   &:nth-child(odd) {
-    background-color: $white;
+    background-color: $color__white;
   }
 
   // Non-BEM but always contained
@@ -39,7 +39,7 @@ $table-gray: #f8f8f8;
 }
 
 .table__cell {
-  border: 1px solid $gray-lightest;
+  border: 1px solid $color__gray-1;
   border-left: none;
   border-bottom: none;
   padding: 1em;
@@ -52,7 +52,7 @@ $table-gray: #f8f8f8;
 .table__footer-cell,
 .table__footer-cell:first-child {
   border-left: none;
-  border-top: 1px solid $gray-lightest;
+  border-top: 1px solid $color__gray-1;
 }
 
 // TODO: BEM selectors should be applied to wysiwyg-created content

@@ -11,7 +11,7 @@
   @include heading-medium($font-size: 1rem);
   @include no-bottom;
 
-  color: $gray;
+  color: $color__gray-3;
 }
 
 .card__body {
@@ -23,11 +23,11 @@
 }
 
 .card__button {
-  @include button;
+  @include button-base;
 }
 
 // Variations
 .card--bg {
-  background-color: $gray-lightest;
+  background-color: $color__gray-1;
   padding: 1em;
 }

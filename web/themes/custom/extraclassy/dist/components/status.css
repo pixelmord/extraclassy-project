@@ -1,0 +1,50 @@
+.status--warning{
+  background-color:#f9fb93;
+  color:shade(#f9fb93, 60%);
+  display:block;
+  margin-bottom:0.75em;
+  padding:0.75em;
+  text-align:center; }
+  .status--warning a{
+    color:shade(#f9fb93, 70%);
+    text-decoration:underline; }
+    .status--warning a:focus, .status--warning a:hover{
+      color:shade(#f9fb93, 90%); }
+  .status--warning .placeholder{
+    font-style:normal;
+    font-weight:800; }
+
+.status--error{
+  background-color:#fbe3e4;
+  color:shade(#fbe3e4, 60%);
+  display:block;
+  margin-bottom:0.75em;
+  padding:0.75em;
+  text-align:center; }
+  .status--error a{
+    color:shade(#fbe3e4, 70%);
+    text-decoration:underline; }
+    .status--error a:focus, .status--error a:hover{
+      color:shade(#fbe3e4, 90%); }
+  .status--error .placeholder{
+    font-style:normal;
+    font-weight:800; }
+
+.status--status{
+  background-color:#cfefc2;
+  color:shade(#cfefc2, 60%);
+  display:block;
+  margin-bottom:0.75em;
+  padding:0.75em;
+  text-align:center; }
+  .status--status a{
+    color:shade(#cfefc2, 70%);
+    text-decoration:underline; }
+    .status--status a:focus, .status--status a:hover{
+      color:shade(#cfefc2, 90%); }
+  .status--status .placeholder{
+    font-style:normal;
+    font-weight:800; }
+
+
+/*# sourceMappingURL=status.css.map*/

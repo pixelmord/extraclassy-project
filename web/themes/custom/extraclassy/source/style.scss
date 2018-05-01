@@ -1,11 +1,10 @@
-@import "breakpoint-sass/stylesheets/breakpoint";
+@import 'breakpoint-sass/stylesheets/breakpoint';
 
-@import "config/breakpoints";
-@import "config/color-vars";
-@import "config/colors-used";
-@import "config/mixins";
-@import "config/variables";
+@import 'config/breakpoints';
+@import 'components/00-base/global/01-colors/color-vars';
+@import 'config/colors-used';
+@import 'config/mixins';
+@import 'config/variables';
 
-
-@import "components/00-base/**/*.scss";
-@import "components/01-elements/**/*.scss";
+@import 'components/00-base/**/*.scss';
+@import 'components/01-elements/**/*.scss';

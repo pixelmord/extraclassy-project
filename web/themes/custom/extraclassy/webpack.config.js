@@ -1,18 +1,17 @@
 const path = require('path');
 
 // Plugins
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const SpriteLoaderPlugin = require('svg-sprite-loader/plugin')
-const CleanPlugin = require('clean-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
+const CleanPlugin = require('clean-webpack-plugin');
 const magicImporter = require('node-sass-magic-importer');
+const merge = require('webpack-merge');
 
-
-module.exports = {
+const baseConfig = {
+  mode: process.env.NODE_ENV === 'development' ? 'development' : 'production',
   context: path.resolve(__dirname, 'source/'),
-  entry: {
-    extraclassy: './index.js',
-    patternlab: './patternlab.js'
-  },
+  devtool: 'source-map',
+  target: 'web',
   module: {
     rules: [
       // JavaScript
@@ -43,14 +42,25 @@ module.exports = {
         test: /\.scss$/,
         use: [
           MiniCssExtractPlugin.loader,
-          'css-loader',
-          'postcss-loader',
+          {
+            loader: 'css-loader',
+            options: { sourceMap: true }
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: true,
+              ident: 'postcss'
+            }
+          },
           {
             loader: 'sass-loader',
             options: {
               importer: magicImporter(),
+              sourceMap: true,
               includePaths: [
-                path.resolve('./node_modules/')
+                path.resolve('./node_modules/'),
+                path.resolve(__dirname, 'source/')
               ]
             }
           }
@@ -58,10 +68,7 @@ module.exports = {
       },
       {
         test: /\.(gif|png|jpe?g)$/i,
-        use: [
-          'file-loader?name=[path][name].[ext]',
-          'image-webpack-loader'
-        ]
+        use: ['file-loader?name=[path][name].[ext]', 'image-webpack-loader']
       },
       {
         test: /\.svg$/,
@@ -78,9 +85,7 @@ module.exports = {
     ]
   },
   output: {
-    filename: process.env.NODE_ENV === 'development'
-        ? '[name].js'
-        : '[name].[hash:8].js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist/')
   },
   plugins: [
@@ -89,12 +94,49 @@ module.exports = {
 
     // Extract CSS to its own file
     new MiniCssExtractPlugin({
-      filename: process.env.NODE_ENV === 'development'
-          ? '[name].css'
-          : '[name].[hash:8].css',
+      filename: '[name].css'
     }),
 
     // Create SVG sprite
     new SpriteLoaderPlugin()
   ]
-}
+};
+
+module.exports = [
+  merge(baseConfig, {
+    entry: {
+      extraclassy: './index.js',
+      patternlab: './patternlab.js'
+    }
+  }),
+  merge(baseConfig, {
+    entry: {
+      'components/main-menu':
+        './components/02-components/menus/main-menu/index.js'
+    }
+  }),
+  merge(baseConfig, {
+    entry: {
+      'components/menu':
+        './components/02-components/menus/menu/index.js'
+    }
+  }),
+  merge(baseConfig, {
+    entry: {
+      'components/tabs':
+        './components/02-components/menus/tabs/index.js'
+    }
+  }),
+  merge(baseConfig, {
+    entry: {
+      'components/pager':
+        './components/02-components/pager/index.js'
+    }
+  }),
+  merge(baseConfig, {
+    entry: {
+      'components/status':
+        './components/02-components/status/index.js'
+    }
+  })
+];

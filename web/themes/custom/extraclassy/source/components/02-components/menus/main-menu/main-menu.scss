@@ -1,0 +1,324 @@
+@import 'breakpoint-sass/stylesheets/breakpoint';
+@import 'config/breakpoints';
+@import 'components/00-base/global/01-colors/color-vars';
+@import 'config/colors-used';
+@import 'config/mixins';
+@import 'config/variables';
+@import '../../../01-elements/01-links/link/_mixin.scss';
+/* Menu Breakpoint*/
+$main-menu-medium: 43em;
+
+// Nav
+.main-nav {
+  display: none;
+
+  @include breakpoint($main-menu-medium) {
+    display: block;
+  }
+
+  &--open {
+    display: block;
+  }
+}
+
+// UL
+.main-menu {
+  @include list-reset;
+
+  border-bottom: 1px solid;
+  position: relative;
+  z-index: 10;
+
+  @include breakpoint($main-menu-medium) {
+    border-bottom: none;
+  }
+
+  &--open {
+    position: fixed;
+    top: 134px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 85%;
+    overflow-y: scroll;
+    background-color: $color__white;
+  }
+}
+
+//
+// Sub Navigation
+//
+
+// UL (Nested)
+.main-menu--sub {
+  border-bottom: none;
+  height: 0;
+  overflow: hidden;
+  background-color: $color__near-white;
+  width: 100%;
+
+  @include breakpoint($main-menu-medium) {
+    background-color: $color__gray-1;
+    display: none;
+    height: auto;
+    left: 0;
+    overflow: visible;
+    padding: $space 0;
+    position: absolute;
+    top: 55px;
+    width: 315px;
+    z-index: 1;
+    font-size: 0.9rem;
+    opacity: 0.6;
+  }
+
+  &:hover {
+    @include breakpoint($main-menu-medium) {
+      opacity: 1;
+      background-color: $color__black;
+      transition: all 0.2s;
+
+      .main-menu__link--sub {
+        color: $color__gray-3;
+
+        &.active,
+        &:active,
+        &:hover {
+          color: $color__white;
+          background-color: $color__black;
+        }
+      }
+    }
+  }
+
+  // See main-menu.js
+  &-open {
+    height: auto;
+  }
+}
+
+.main-menu--sub-2 {
+  @include breakpoint($main-menu-medium) {
+    display: none; // Never shown on large screens
+  }
+}
+
+// LI
+.main-menu__item {
+  border-top: 1px solid;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+
+  @include breakpoint($main-menu-medium) {
+    border-top: none;
+    display: inline-block;
+
+    // Only top level
+    &:not(.main-menu__item--sub):hover {
+      background-color: $color__black;
+      transition: all 0.2s;
+
+      & > .main-menu--sub {
+        display: block;
+      }
+    }
+  }
+
+  &:hover {
+    .main-menu__link::after {
+      color: $color__gray-3;
+    }
+  }
+}
+
+// Expand Button
+.expand-sub {
+  background-color: $color__black;
+  cursor: pointer;
+  display: block;
+  width: 20%;
+  color: $color__white;
+  position: relative;
+
+  @include breakpoint($main-menu-medium) {
+    display: none;
+  }
+
+  // Down triangle
+  &::after {
+    border: 15px solid;
+    border-bottom-color: transparent;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    content: '';
+    display: block;
+    margin-right: -12px;
+    margin-top: -6px;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    width: 0;
+  }
+
+  // See main-menu.js
+  &--open {
+    background-color: $color__black;
+    color: $color__near-white;
+
+    &::after {
+      border-top-color: transparent;
+      border-bottom: 15px solid;
+      margin-top: -20px;
+    }
+  }
+}
+
+//
+// Sub Navigation
+//
+// LI (Nested)
+.main-menu__item--sub {
+  @include breakpoint($main-menu-medium) {
+    display: block;
+
+    &:not(:first-child) {
+      border-top: 1px solid $color__gray-3;
+    }
+  }
+}
+
+// A
+.main-menu__link {
+  color: $color__gray-5;
+  display: block;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  padding: $space $space-triple $space $space-double;
+  text-decoration: none;
+  font-weight: bold;
+
+  &--with-sub {
+    width: 80%;
+  }
+
+  @include breakpoint($main-menu-medium) {
+    border-bottom: none;
+    color: $color__gray-5;
+    display: inline-block;
+    font-size: 1.1rem;
+    padding: $space $space-double $space $space;
+    text-transform: none;
+    position: relative;
+    width: auto;
+
+    &.active,
+    &:active,
+    &:hover {
+      color: $color__gray-2;
+    }
+
+    &::after {
+      color: $color__white;
+      display: inline-block;
+      content: '>';
+    }
+
+    &--sub::after {
+      display: none;
+    }
+
+    &:hover {
+      color: $color__white;
+
+      &::after {
+        color: $color__gray-3;
+      }
+    }
+  }
+}
+
+//
+// Sub Navigation Links
+//
+// A (Nested)
+.main-menu__link--sub {
+  color: $color__gray-5;
+  padding-left: $space-triple;
+  font-weight: normal;
+
+  @include breakpoint($main-menu-medium) {
+    color: $color__gray-3;
+    display: block;
+    padding: $space-one-third $space;
+  }
+}
+
+.main-menu--sub-2 {
+  background-color: $color__gray-1;
+}
+
+.main-menu__link--sub-2 {
+  padding-left: $space-quadruple;
+}
+
+// Toggle
+.toggle-expand {
+  @include link;
+
+  @include breakpoint($main-menu-medium) {
+    display: none;
+  }
+
+  display: inline-block;
+  padding: $space;
+  text-decoration: none;
+  width: 100%;
+
+  // See main-menu.js
+  &--open {
+    background-color: $color__gray-5;
+  }
+}
+
+.toggle-expand__text {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: bold;
+
+  .toggle-expand--open & {
+    color: $color__white;
+  }
+}
+
+.toggle-expand__icon {
+  width: 5rem;
+  padding-bottom: 3rem;
+  margin: 0 auto;
+}
+
+.toggle-expand__open {
+  display: inline-block;
+  text-align: center;
+
+  .toggle-expand--open & {
+    display: none;
+  }
+}
+
+.toggle-expand__close {
+  display: none;
+  text-align: center;
+
+  &::before {
+    color: $color__white;
+    content: 'X';
+    display: block;
+    font-size: 2.5rem;
+    line-height: 2;
+  }
+
+  .toggle-expand--open & {
+    display: inline-block;
+  }
+}

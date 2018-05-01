@@ -79,7 +79,17 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _content = __webpack_require__(/*! ./js/content */ \"./js/content.js\");\n\nvar _content2 = _interopRequireDefault(_content);\n\n__webpack_require__(/*! ./style.scss */ \"./style.scss\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n(0, _content2.default)();\n\n//# sourceURL=webpack:///./index.js?");
+
+
+var _content = __webpack_require__(/*! ./js/content */ "./js/content.js");
+
+var _content2 = _interopRequireDefault(_content);
+
+__webpack_require__(/*! ./style.scss */ "./style.scss");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+(0, _content2.default)();
 
 /***/ }),
 
@@ -91,7 +101,15 @@ eval("\n\nvar _content = __webpack_require__(/*! ./js/content */ \"./js/content.
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nexports.default = function () {\n  console.log('content');\n};\n\n//# sourceURL=webpack:///./js/content.js?");
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function () {
+  console.log('content');
+};
 
 /***/ }),
 
@@ -102,8 +120,9 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./style.scss?");
+// extracted by mini-css-extract-plugin
 
 /***/ })
 
 /******/ });
+//# sourceMappingURL=extraclassy.js.map

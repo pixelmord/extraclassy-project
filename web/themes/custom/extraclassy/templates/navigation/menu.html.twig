@@ -18,4 +18,5 @@
  *   - in_active_trail: TRUE if the link is in the active trail.
  */
 #}
-{% include "@components/menus/_menu.twig" %}
+{{ attach_library('extraclassy/menu') }}
+{% include "@components/menus/menu/_menu.twig" %}

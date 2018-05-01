@@ -1,8 +1,8 @@
 .tabs__link {
-  background-color: $near-white;
-  border: 1px solid $gray-lightest;
+  background-color: $color__near-white;
+  border: 1px solid $color__gray-1;
   border-bottom: none;
-  color: $gray;
+  color: $color__gray-3;
   display: block;
   font-size: 1.1rem;
   font-weight: 600;
@@ -12,7 +12,7 @@
   transition: color 0.3s;
 
   @include large {
-    border-bottom: 1px solid $gray-lightest;
+    border-bottom: 1px solid $color__gray-1;
     border-left: none;
     display: inline-block;
     font-size: 1rem;
@@ -23,21 +23,21 @@
   }
 
   &:hover {
-    background-color: $gray-lightest;
-    color: $gray-darker;
+    background-color: $color__gray-1;
+    color: $color__gray-4;
   }
 
   &.is-active {
-    background-color: $gray;
-    border: 1px solid $gray;
-    color: $white;
+    background-color: $color__gray-3;
+    border: 1px solid $color__gray-3;
+    color: $color__white;
 
     @include large {
-      background-color: $white;
-      border: 1px solid $gray-lightest;
-      border-bottom: 1px solid $gray;
+      background-color: $color__white;
+      border: 1px solid $color__gray-1;
+      border-bottom: 1px solid $color__gray-3;
       border-left: none;
-      color: $gray;
+      color: $color__gray-3;
     }
   }
 }

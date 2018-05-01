@@ -1,0 +1,32 @@
+.tabs__nav{
+  list-style:none;
+  margin:0;
+  padding:0;
+  border-bottom:1px solid #e5e5e5; }
+
+.tabs__tab{
+  display:none; }
+  .tabs__tab.is-active{
+    display:block; }
+
+.tabs__content{
+  padding:1.5rem; }
+
+.tabs.no-js .tabs__tab.is-active{
+  display:block; }
+
+.tabs__nav--local-tasks{
+  margin:1em 0 0.5em;
+  padding:0; }
+
+.tabs__link--local-tasks{
+  padding:0.3em 1.5em; }
+
+@media (min-width: 48em){
+    .tabs__nav{
+      border-left:1px solid #e5e5e5;
+      display:-ms-flexbox;
+      display:flex; } }
+
+
+/*# sourceMappingURL=tabs.css.map*/

@@ -5,3 +5,37 @@ global:
       dist/extraclassy.css: {}
   js:
     dist/extraclassy.js: {}
+
+main_menu:
+  version: 0.1.x
+  css:
+    theme:
+      dist/components/main-menu.css: {}
+  js:
+    dist/components/main-menu.js: {}
+  dependencies:
+    - core/drupal
+
+menu:
+  version: 0.1.x
+  css:
+    theme:
+      dist/components/menu.css: {}
+
+tabs:
+  version: 0.1.x
+  css:
+    theme:
+      dist/components/tabs.css: {}
+
+pager:
+  version: 0.1.x
+  css:
+    theme:
+      dist/components/pager.css: {}
+
+status:
+  version: 0.1.x
+  css:
+    theme:
+      dist/components/status.css: {}

@@ -7,8 +7,8 @@
     position: relative;
 
     &::after {
-      background-color: $gray-lighter;
-      content: "";
+      background-color: $color__gray-2;
+      content: '';
       display: block;
       height: 100%;
       position: absolute;

@@ -1,12 +1,7 @@
 /// Link
-@mixin link {
-  color: $color-link;
+@import './_mixin.scss';
 
-  &:hover {
-    color: $color-link--hover;
-  }
-}
-
+a,
 .link {
   @include link;
 }

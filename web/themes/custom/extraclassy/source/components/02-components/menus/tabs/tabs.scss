@@ -1,11 +1,18 @@
+@import 'breakpoint-sass/stylesheets/breakpoint';
+@import 'config/breakpoints';
+@import 'components/00-base/global/01-colors/color-vars';
+@import 'config/colors-used';
+@import 'config/mixins';
+@import 'config/variables';
+
 // Tab Navigation
 .tabs__nav {
   @include list-reset;
 
-  border-bottom: 1px solid $gray-lightest;
+  border-bottom: 1px solid $color__gray-1;
 
   @include large {
-    border-left: 1px solid $gray-lightest;
+    border-left: 1px solid $color__gray-1;
     display: flex;
   }
 }

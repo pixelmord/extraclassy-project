@@ -1,21 +1,21 @@
 items:
-  - name: $white
+  - name: $color__white
     value: white
-  - name: $near-white
+  - name: $color__near-white
     value: '#f2f2f2'
-  - name: $gray-lightest
+  - name: $color__gray-1
     value: '#e5e5e5'
-  - name: $gray-lighter
+  - name: $color__gray-2
     value: '#ccc'
-  - name: $gray-light
+  - name: $color__gray-3
     value: '#999'
-  - name: $gray
+  - name: $color__gray-3
     value: '#666'
-  - name: $gray-dark
+  - name: $color__gray-5
     value: '#4c4c4c'
-  - name: $gray-darker
+  - name: $color__gray-4
     value: '#333'
-  - name: $black
+  - name: $color__black
     value: black
 meta:
   description: >-

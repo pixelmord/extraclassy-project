@@ -1,4 +1,3 @@
-import content from './js/content'
 import './patternlab.scss'
 
-content()
+import './components/02-components/menus/main-menu/index'

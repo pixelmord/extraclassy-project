@@ -1,0 +1,21 @@
+@mixin link {
+  color: $color-link;
+
+  &:visited {
+    color: $color-link;
+  }
+
+  &:active,
+  &:hover,
+  &:focus {
+    color: $color-link--hover;
+  }
+  &:focus {
+    @include focus-outline('border');
+  }
+
+  &[aria-disabled='true'] {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}

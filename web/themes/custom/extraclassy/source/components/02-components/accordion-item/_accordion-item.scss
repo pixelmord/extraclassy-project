@@ -1,6 +1,6 @@
 .accordion-term {
-  border-top: 1px solid $gray-lightest;
-  color: $gray-dark;
+  border-top: 1px solid $color__gray-1;
+  color: $color__gray-5;
   cursor: pointer;
   display: block;
   font-size: 1rem;
@@ -8,20 +8,20 @@
   padding: 1em 0;
 
   &::before {
-    content: "+";
+    content: '+';
     padding: 0.8em;
     top: 0.35em;
   }
 
   &:hover {
-    color: $gray;
+    color: $color__gray-3;
   }
 
   &.is-active {
-    color: $gray;
+    color: $color__gray-3;
 
     &::before {
-      content: "-";
+      content: '-';
       top: 0.45em;
     }
 

@@ -8,7 +8,7 @@
 @mixin clearfix {
   &::after {
     clear: both;
-    content: "";
+    content: '';
     display: table;
   }
 }
@@ -25,7 +25,7 @@
 /// Precede Text with SVG icon
 @mixin with-icon {
   background-size: cover;
-  content: "";
+  content: '';
   display: inline-block;
   margin-right: 0.1em;
   padding: 0.8em;
@@ -49,7 +49,7 @@
     text-decoration: none;
 
     &::before {
-      content: "»";
+      content: '»';
       font-size: 1.2rem;
       margin-right: 0.2em;
     }
@@ -65,7 +65,7 @@
   text-decoration: none;
 
   &::before {
-    content: "«";
+    content: '«';
     font-size: 1.2rem;
     margin-right: 0.2em;
   }
@@ -74,7 +74,7 @@
 /// Mixin - Body Copy
 @mixin body-copy {
   font-family: $font-body;
-  font-size: 0.9rem;
+  font-size: $base-font-size;
   line-height: 1.6em;
 }
 
@@ -90,4 +90,32 @@
 /// Mixin - Standard Margin
 @mixin margin {
   margin-bottom: 1em;
+}
+
+@mixin focus-outline($type: 'border') {
+  @if ($type == 'border') {
+    outline: 1px solid $color-link;
+  }
+
+  @if ($type == 'blurred') {
+    box-shadow: 0 0 0 3px $color-link;
+    outline: 1px solid transparent;
+  }
+}
+
+// Only applied to bold weight text
+@mixin font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin letter-spacing {
+  letter-spacing: 0.5px;
+}
+@function rem($px) {
+  @return ($px / $base-font-size) * 1rem;
+}
+
+@function em($px) {
+  @return ($px / $base-font-size) * 1em;
 }

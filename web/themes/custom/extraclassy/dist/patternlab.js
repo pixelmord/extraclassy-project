@@ -71,15 +71,79 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./js/content.js":
-/*!***********************!*\
-  !*** ./js/content.js ***!
-  \***********************/
+/***/ "./components/02-components/menus/main-menu/index.js":
+/*!***********************************************************!*\
+  !*** ./components/02-components/menus/main-menu/index.js ***!
+  \***********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nexports.default = function () {\n  console.log('content');\n};\n\n//# sourceURL=webpack:///./js/content.js?");
+
+
+__webpack_require__(/*! ./main-menu.scss */ "./components/02-components/menus/main-menu/main-menu.scss");
+
+__webpack_require__(/*! ./main-menu */ "./components/02-components/menus/main-menu/main-menu.js");
+
+/***/ }),
+
+/***/ "./components/02-components/menus/main-menu/main-menu.js":
+/*!***************************************************************!*\
+  !*** ./components/02-components/menus/main-menu/main-menu.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/**
+ * @file
+ * A JavaScript file containing the main menu functionality (small/large screen)
+ *
+ */
+
+(function (Drupal) {
+  Drupal.behaviors.mainMenu = {
+    attach: function attach(context) {
+      'use strict';
+
+      // Use context instead of document IF DRUPAL.
+
+      var toggle_expand = document.getElementById('toggle-expand');
+      var menu = document.getElementById('main-nav');
+      var expand_menu = menu.getElementsByClassName('expand-sub');
+
+      // Mobile Menu Show/Hide.
+      toggle_expand.addEventListener('click', function (e) {
+        toggle_expand.classList.toggle('toggle-expand--open');
+        menu.classList.toggle('main-nav--open');
+      });
+
+      // Expose mobile sub menu on click.
+      for (var i = 0; i < expand_menu.length; i++) {
+        expand_menu[i].addEventListener('click', function (e) {
+          var menu_item = e.currentTarget;
+          var sub_menu = menu_item.nextElementSibling;
+
+          menu_item.classList.toggle('expand-sub--open');
+          sub_menu.classList.toggle('main-menu--sub-open');
+        });
+      }
+    }
+  };
+})(Drupal); // UNCOMMENT IF DRUPAL.
+
+/***/ }),
+
+/***/ "./components/02-components/menus/main-menu/main-menu.scss":
+/*!*****************************************************************!*\
+  !*** ./components/02-components/menus/main-menu/main-menu.scss ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
 
 /***/ }),
 
@@ -91,7 +155,11 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _content = __webpack_require__(/*! ./js/content */ \"./js/content.js\");\n\nvar _content2 = _interopRequireDefault(_content);\n\n__webpack_require__(/*! ./patternlab.scss */ \"./patternlab.scss\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n(0, _content2.default)();\n\n//# sourceURL=webpack:///./patternlab.js?");
+
+
+__webpack_require__(/*! ./patternlab.scss */ "./patternlab.scss");
+
+__webpack_require__(/*! ./components/02-components/menus/main-menu/index */ "./components/02-components/menus/main-menu/index.js");
 
 /***/ }),
 
@@ -102,8 +170,9 @@ eval("\n\nvar _content = __webpack_require__(/*! ./js/content */ \"./js/content.
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./patternlab.scss?");
+// extracted by mini-css-extract-plugin
 
 /***/ })
 
 /******/ });
+//# sourceMappingURL=patternlab.js.map

@@ -1,50 +1,120 @@
-@mixin button($bg:$black, $color:$white, $hoverBg: $gray, $hoverColor: $white) {
-  background-color: $bg;
-  border: none;
-  color: $color;
+@mixin button-base {
+  @include font-smoothing;
+  @include letter-spacing;
   cursor: pointer;
-  line-height: 1.4;
-  padding: 0.5em 1em;
-  display: inline-block;
-  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: $button-font-size;
+  font-weight: $button-font-weight;
+  height: rem($button-height);
+  padding: $button-padding;
+  border-radius: $button-border-radius;
   text-align: center;
-  text-transform: uppercase;
+  text-decoration: none;
+  transition-duration: $transition--base;
+  transition-timing-function: ease-in;
+  white-space: nowrap;
+  line-height: 16px;
 
-  &:visited {
-    color: $color;
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
   }
 
+  .button__icon {
+    width: rem(16px);
+    height: rem(16px);
+    margin-left: 0.5rem;
+    transition-duration: $transition--base;
+    transition-timing-function: ease-in;
+  }
+}
+
+@mixin button-theme(
+  $bg-color,
+  $border-color,
+  $font-color,
+  $hover-bg-color,
+  $icon-color
+) {
+  background-color: $bg-color;
+  border-width: $button-border-width;
+  border-style: solid;
+  border-color: $border-color;
+  color: $font-color;
+
+  &:focus,
   &:hover {
-    background-color: $hoverBg;
+    background-color: $hover-bg-color;
   }
-}
 
-@mixin button-alt {
-  @include button($gray, $white, $black);
+  &:focus {
+    border: $button-border-width solid $ui-02;
+    outline: $button-border-width solid $hover-bg-color;
+  }
 
-  font-weight: 600;
-  font-size: 0.7rem;
-  padding: 0.4em 0.6em 0.3em;
-}
+  &:disabled:hover,
+  &:disabled:focus {
+    background-color: $bg-color;
+  }
 
-@mixin button-alt-2 {
-  @include button($gray-lightest, $black, $gray-lighter);
+  &:active {
+    background-color: darken($bg-color, 20%);
+  }
 
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: none;
+  .button__icon {
+    fill: $icon-color;
+  }
 }
 
 .button {
-  @include button;
+  @include button-base;
+  @include button-theme(
+    $color__white,
+    $color__gray-1,
+    inherit,
+    $color__gray-1,
+    inherit
+  );
 
-  &--alt {
-    @include button;
-    @include button-alt;
+  &--primary {
+    @include button-theme(
+      $brand-01,
+      transparent,
+      $inverse-01,
+      $brand-02,
+      $ui-01
+    );
   }
 
-  &--alt-2 {
-    @include button;
-    @include button-alt-2;
+  &--secondary {
+    @include button-theme(
+      transparent,
+      $brand-01,
+      $brand-01,
+      $brand-01,
+      $brand-01
+    );
+
+    &:hover,
+    &:focus {
+      color: $inverse-01;
+    }
+
+    &:active {
+      color: $brand-01;
+    }
+
+    &:hover > .button__icon,
+    &:focus > .button__icon {
+      fill: $inverse-01;
+    }
+
+    &:hover:disabled,
+    &:focus:disabled {
+      color: $brand-01;
+    }
   }
 }

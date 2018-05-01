@@ -7,19 +7,52 @@
 
 // Fonts
 // @see: https://css-tricks.com/snippets/css/system-font-stack/
-$font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-$font-heading: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+  Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+$font-heading: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+  Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+$base-font-size: 16px !default;
+
+//-------------------------------------------
+// 🌌 Spacing
+// ------------------------------------------
+//
+//   Size in px based on 16px base
+//   ==========================================
+//   3xs  ||  2px
+//   2xs  ||  4px
+//   xs   ||  8px
+//   sm   ||  12px
+//   md   ||  16px
+//   lg   ||  24px
+//   xl   ||  32px
+//   2xl  ||  40px
+//   3xl  ||  48px
+//   ==========================================
+
+$spacing-baseline: 1rem !default;
+
+$spacing-3xs: $spacing-baseline * 0.125 !default;
+$spacing-2xs: $spacing-baseline * 0.25 !default;
+$spacing-xs: $spacing-baseline * 0.5 !default;
+$spacing-sm: $spacing-baseline * 0.75 !default;
+$spacing-md: $spacing-baseline !default;
+$spacing-lg: $spacing-baseline * 1.5 !default;
+$spacing-xl: $spacing-baseline * 2 !default;
+$spacing-2xl: $spacing-baseline * 2.5 !default;
+$spacing-3xl: $spacing-baseline * 3 !default;
 
 // Spacing
 $space: 1rem;
 
 // times
-$space-double: $space*2;
-$space-triple: $space*3;
-$space-quadruple: $space*4;
-$space-quintuple: $space*5;
-$space-sextuple: $space*6;
-$space-septuple: $space*7;
+$space-double: $space * 2;
+$space-triple: $space * 3;
+$space-quadruple: $space * 4;
+$space-quintuple: $space * 5;
+$space-sextuple: $space * 6;
+$space-septuple: $space * 7;
 
 // divided
 $space-one-half: $space/2;
@@ -29,3 +62,46 @@ $space-one-fifth: $space/5;
 $space-one-sixth: $space/6;
 $space-one-seventh: $space/7;
 $space-one-eighth: $space/8;
+
+$transition--base: 250ms;
+$transition--expansion: 300ms;
+
+// Color Theme Variables
+$brand-01: $color__blue-51 !default;
+$brand-02: $color__blue-40 !default;
+$brand-03: $color__teal-20 !default;
+$inverse-01: $color__white !default;
+$ui-01: $color__white !default;
+$ui-02: $color__gray-3 !default;
+$ui-03: $color__gray-2 !default;
+$ui-04: $color__gray-1 !default;
+$ui-05: $color__navy-gray-7 !default;
+$text-01: $color__blue-90 !default;
+$text-02: $color__navy-gray-6 !default;
+$text-03: $color__navy-gray-6 !default;
+$field-01: rgba($color__blue-51, 0.1) !default;
+$support-01: #e0182d !default;
+$support-02: $color__green-40 !default;
+$support-03: $color__yellow-30 !default;
+$support-04: $color__blue-30 !default;
+$nav-01: $color__navy-gray-1 !default;
+$nav-02: $color__blue-90 !default;
+$nav-03: $color__purple-30 !default;
+$nav-04: $color__purple-60 !default;
+$nav-05: $color__teal-40 !default;
+$nav-06: $color__teal-50 !default;
+$nav-07: $color__blue-30 !default;
+$nav-08: $color__blue-51 !default;
+
+// Global
+$input-border: 1px solid transparent !default;
+$input-label-weight: 600 !default;
+
+// Button Theme Variables
+$button-font-weight: 600 !default;
+$button-font-size: 0.875rem !default;
+$button-border-radius: 0 !default;
+$button-height: 40px !default;
+$button-padding: 0 $spacing-md !default;
+$button-padding-sm: 0 $spacing-xs !default;
+$button-border-width: 2px !default;
