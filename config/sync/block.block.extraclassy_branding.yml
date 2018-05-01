@@ -1,6 +1,6 @@
 uuid: fc36b972-d060-480f-a31d-592326646662
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - system
@@ -10,8 +10,8 @@ _core:
   default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
 id: extraclassy_branding
 theme: extraclassy
-region: toolbar
-weight: 0
+region: header
+weight: -6
 provider: null
 plugin: system_branding_block
 settings:

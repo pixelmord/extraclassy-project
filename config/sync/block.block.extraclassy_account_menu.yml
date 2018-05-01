@@ -1,6 +1,6 @@
 uuid: 4a117faa-2df5-4011-871a-cd4e15d6870f
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - system.menu.account
@@ -12,8 +12,8 @@ _core:
   default_config_hash: DweBpscQZdG0-fHkSpUzdYucrNH45G_KF7Z82V-oyQM
 id: extraclassy_account_menu
 theme: extraclassy
-region: toolbar
-weight: 0
+region: tools
+weight: -4
 provider: null
 plugin: 'system_menu_block:account'
 settings:

@@ -9,6 +9,7 @@ module:
   devel: 0
   devel_generate: 0
   link_css: 0
+  styleguide: 0
 theme: {  }
 blacklist: {  }
 graylist: {  }

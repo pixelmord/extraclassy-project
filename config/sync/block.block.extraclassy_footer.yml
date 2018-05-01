@@ -1,6 +1,6 @@
 uuid: dc13538f-6b11-456c-a11b-fe2324ad60a3
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - system.menu.footer
@@ -12,8 +12,8 @@ _core:
   default_config_hash: kkISXE1LT2FJEoYnqCrCpeFB-2pmGmMxMklVk7rQcfg
 id: extraclassy_footer
 theme: extraclassy
-region: toolbar
-weight: 0
+region: footer
+weight: -6
 provider: null
 plugin: 'system_menu_block:footer'
 settings:

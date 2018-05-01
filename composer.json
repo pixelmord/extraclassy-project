@@ -37,6 +37,7 @@
     "require-dev": {
         "drupal/devel": "^1.2",
         "drupal/link_css": "1.x-dev",
+        "drupal/styleguide": "^1.0@alpha",
         "webflo/drupal-core-require-dev": "~8.5"
     },
     "conflict": {

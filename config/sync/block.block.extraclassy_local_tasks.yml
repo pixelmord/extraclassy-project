@@ -8,8 +8,8 @@ _core:
   default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
 id: extraclassy_local_tasks
 theme: extraclassy
-region: content
-weight: -40
+region: tools
+weight: -3
 provider: null
 plugin: local_tasks_block
 settings:

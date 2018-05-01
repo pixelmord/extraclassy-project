@@ -1,6 +1,6 @@
 uuid: 5cff3485-65e9-478b-a56d-f7fd04638c6c
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - system.menu.tools
@@ -12,8 +12,8 @@ _core:
   default_config_hash: NeHSoqm4XFqA7_0bDmR429ZZQt3LRbZMNRJTMsFyOfI
 id: extraclassy_tools
 theme: extraclassy
-region: toolbar
-weight: 0
+region: tools
+weight: -5
 provider: null
 plugin: 'system_menu_block:tools'
 settings:

@@ -8,8 +8,8 @@ _core:
   default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
 id: extraclassy_local_actions
 theme: extraclassy
-region: content
-weight: -20
+region: tools
+weight: -2
 provider: null
 plugin: local_actions_block
 settings:

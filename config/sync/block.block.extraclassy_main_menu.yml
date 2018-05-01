@@ -1,6 +1,6 @@
 uuid: df62cee4-4d25-4b9b-b725-58565d6c042b
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - system.menu.main
@@ -12,8 +12,8 @@ _core:
   default_config_hash: rx9IrdDv7Ldc4kpalZAxdhIPZfYIeOMh1N-qKoQZwHo
 id: extraclassy_main_menu
 theme: extraclassy
-region: toolbar
-weight: 0
+region: header
+weight: -5
 provider: null
 plugin: 'system_menu_block:main'
 settings:

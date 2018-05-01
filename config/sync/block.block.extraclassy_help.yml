@@ -10,8 +10,8 @@ _core:
   default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
 id: extraclassy_help
 theme: extraclassy
-region: content
-weight: -30
+region: tools
+weight: -1
 provider: null
 plugin: help_block
 settings:
